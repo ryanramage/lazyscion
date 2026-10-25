@@ -42,10 +42,12 @@ lazyscion.edit({path})
 KEYS (inside hs ui)                                         *lazyscion-keys*
 
   j k           move in a list
-  h l tab 1-3   switch panels
+  h l tab 1-4   switch panels (Status, Files, Log, Review)
   enter esc     scroll the main panel, and back
   J K ctrl-d/u  scroll the main panel from anywhere
   c P           land (asks for a message)
+  A             ask for review instead of landing
+  a x m         in Review: approve, request changes, comment
   p             sync
   d             discard the selected file
   e             edit the selected file in this Neovim

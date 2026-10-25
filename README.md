@@ -6,20 +6,24 @@ look at your changes, land, back to the code.
 
 `hs ui` is the lazygit-style terminal UI built into hs:
 
-- **Left:** `[1] Status`, `[2] Files` (what `hs land` would send) and `[3] Log` (landed
-  changesets).
-- **Right:** the selected file's diff, or the selected changeset.
+- **Left:** `[1] Status`, `[2] Files` (what `hs land` would send), `[3] Log` (landed
+  changesets) and `[4] Review` (what waits on you, and your open asks).
+- **Right:** the selected file's diff, changeset, ask or task.
 
 | key                   | does                                                         |
 | --------------------- | ------------------------------------------------------------ |
 | `j` `k`               | move in a list                                               |
-| `h` `l`, `tab`, `1-3` | switch panels                                                |
+| `h` `l`, `tab`, `1-4` | switch panels                                                |
 | `enter`, `esc`        | scroll the main panel, and back                              |
 | `J` `K`, `ctrl+d/u`   | scroll the main panel from anywhere                          |
 | `c` or `P`            | land: asks for a message, then `hs land -m …`                |
+| `A`                   | ask for review instead: `hs review ask -m … [-r who]`        |
 | `p`                   | sync: `hs sync`                                              |
 | `d`                   | discard the selected file: `hs restore <path>`               |
 | `e`                   | edit the selected file here in Neovim (the float hides)      |
+| `a` (in Review)       | approve the selected ask, change or task                     |
+| `x` (in Review)       | request changes (asks for a message)                         |
+| `m` (in Review)       | comment                                                      |
 | `r`                   | refresh                                                      |
 | `?`                   | every key                                                    |
 | `q`                   | quit                                                         |
