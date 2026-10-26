@@ -7,23 +7,28 @@ look at your changes, land, back to the code.
 `hs ui` is the lazygit-style terminal UI built into hs:
 
 - **Left:** `[1] Status`, `[2] Files` (what `hs land` would send), `[3] Log` (landed
-  changesets) and `[4] Review` (what waits on you, and your open asks).
+  changesets), `[4] Review` (what waits on you, and your open asks) and `[5] Tasks` (the
+  board: open tasks and who leads each).
 - **Right:** the selected file's diff, changeset, ask or task.
 
 | key                   | does                                                         |
 | --------------------- | ------------------------------------------------------------ |
 | `j` `k`               | move in a list                                               |
-| `h` `l`, `tab`, `1-4` | switch panels                                                |
+| `h` `l`, `tab`, `1-5` | switch panels                                                |
 | `enter`, `esc`        | scroll the main panel, and back                              |
 | `J` `K`, `ctrl+d/u`   | scroll the main panel from anywhere                          |
 | `c` or `P`            | land: asks for a message, then `hs land -m …`                |
-| `A`                   | ask for review instead: `hs review ask -m … [-r who]`        |
+| `A`                   | ask for review instead; tab to Reviewers to pick teammates   |
 | `p`                   | sync: `hs sync`                                              |
 | `d`                   | discard the selected file: `hs restore <path>`               |
 | `e`                   | edit the selected file here in Neovim (the float hides)      |
 | `a` (in Review)       | approve the selected ask, change or task                     |
 | `x` (in Review)       | request changes (asks for a message)                         |
 | `m` (in Review)       | comment                                                      |
+| `n` (in Tasks)        | file a task: `hs task new <title>`                           |
+| `s` / `S` (in Tasks)  | start the selected task / stop (step away from) it           |
+| `D` (in Tasks)        | mark it done (asks first)                                    |
+| `X` (in Tasks)        | drop a task you filed (asks first)                           |
 | `r`                   | refresh                                                      |
 | `?`                   | every key                                                    |
 | `q`                   | quit                                                         |
